@@ -1,10 +1,8 @@
-<div align="center">
-
 # 🏥 SALUD+ 360
 
-### Sistema Integral Inteligente para la Gestión Hospitalaria
+## Sistema Integral Inteligente para la Gestión Hospitalaria
 
-**Plataforma Web para Hospitales, Clínicas, IPS y Centros Médicos**
+Plataforma web para hospitales, clínicas, IPS y centros médicos.
 
 ![Version](https://img.shields.io/badge/version-1.0-blue)
 ![Backend](https://img.shields.io/badge/NestJS-Backend-red)
@@ -13,29 +11,37 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-En%20Desarrollo-yellow)
 
-[Repositorio](https://github.com/angietatianaalbaamado-bot/-SALUD-360) · [Reportar un problema](https://github.com/angietatianaalbaamado-bot/-SALUD-360/issues)
-
-</div>
+- [Repositorio](https://github.com/angietatianaalbaamado-bot/-SALUD-360)
+- [Reportar un problema](https://github.com/angietatianaalbaamado-bot/-SALUD-360/issues)
 
 ---
 
 ## 📌 Descripción
 
-**SALUD+ 360** es una plataforma integral de gestión hospitalaria diseñada para optimizar los procesos administrativos, clínicos y asistenciales de hospitales, clínicas, IPS y centros médicos.
+**SALUD+ 360** es una plataforma integral de gestión hospitalaria diseñada
+para optimizar los procesos administrativos, clínicos y asistenciales de
+hospitales, clínicas, IPS y centros médicos.
 
-El sistema permite administrar desde el ingreso del paciente hasta su egreso, centralizando toda la información clínica, administrativa y financiera en una única plataforma moderna, segura y escalable.
+El sistema permite administrar desde el ingreso del paciente hasta su egreso,
+centralizando toda la información clínica, administrativa y financiera en una
+única plataforma moderna, segura y escalable.
 
-El proyecto está orientado a implementar buenas prácticas de Ingeniería de Software, Arquitectura Limpia, APIs REST y trabajo colaborativo mediante Git y GitHub.
+El proyecto está orientado a implementar buenas prácticas de Ingeniería de
+Software, Arquitectura Limpia, APIs REST y trabajo colaborativo mediante Git y
+GitHub.
 
 ---
 
 ## 🎯 Objetivos
 
-**Objetivo general**
+### Objetivo general
 
-Desarrollar una plataforma web que permita administrar de forma eficiente todos los procesos de una institución prestadora de servicios de salud (IPS), incluyendo la gestión de pacientes, historias clínicas, citas médicas, farmacia, laboratorio, hospitalización, facturación y reportes.
+Desarrollar una plataforma web que permita administrar de forma eficiente todos
+los procesos de una institución prestadora de servicios de salud (IPS),
+incluyendo la gestión de pacientes, historias clínicas, citas médicas, farmacia,
+laboratorio, hospitalización, facturación y reportes.
 
-**Objetivos específicos**
+### Objetivos específicos
 
 - Gestionar pacientes, personal médico e historias clínicas.
 - Administrar el proceso de Triage y signos vitales.
@@ -54,7 +60,7 @@ Desarrollar una plataforma web que permita administrar de forma eficiente todos 
 
 Arquitectura basada en tres capas:
 
-```
+```text
    React (Frontend)
          │
          ▼
@@ -69,7 +75,7 @@ NestJS API REST (Backend)
 ## 🚀 Tecnologías
 
 | Capa | Tecnologías |
-|---|---|
+| --- | --- |
 | **Frontend** | React, Vite, TypeScript, Tailwind CSS, React Router, Axios |
 | **Backend** | NestJS, TypeORM, JWT, Passport, Swagger, Class Validator |
 | **Base de datos** | PostgreSQL |
@@ -79,7 +85,7 @@ NestJS API REST (Backend)
 
 ## 📁 Estructura del proyecto
 
-```
+```text
 SALUD-PLUS-360
 ├── backend
 ├── frontend
@@ -95,7 +101,9 @@ SALUD-PLUS-360
 
 ## ⚙️ Instalación y ejecución local
 
-> ⚠️ **Nota:** el repositorio aún no tiene código publicado. Esta sección es un placeholder con la estructura esperada de comandos; se actualizará a medida que se suban el backend y el frontend.
+> ⚠️ **Nota:** el repositorio aún no tiene código publicado. Esta sección
+> es un placeholder con la estructura esperada de comandos; se actualizará a
+> medida que se suban el backend y el frontend.
 
 ### Requisitos previos
 
@@ -143,7 +151,7 @@ npm run migration:run
 
 Una vez el backend esté corriendo, la documentación Swagger estará disponible en:
 
-```
+```text
 http://localhost:3000/api/docs
 ```
 
@@ -151,7 +159,7 @@ http://localhost:3000/api/docs
 
 ## 🌳 Flujo de trabajo con Git
 
-```
+```text
 main
  └── develop
        ├── feature/auth
@@ -200,14 +208,18 @@ Luego se abre un **Pull Request**: `feature/patients` → `develop` → `main`.
 
 ## 📚 Módulos del sistema
 
-Seguridad · Usuarios · Roles · Pacientes · Médicos · Especialidades · Agenda Médica · Citas · Historia Clínica · Triage · Hospitalización · Farmacia · Inventario · Medicamentos · Laboratorio · Imagenología · Enfermería · Procedimientos · Vacunación · Facturación · EPS · Ambulancias · Emergencias · Reportes · Dashboard · Configuración
+Seguridad · Usuarios · Roles · Pacientes · Médicos · Especialidades ·
+Agenda Médica · Citas · Historia Clínica · Triage · Hospitalización ·
+Farmacia · Inventario · Medicamentos · Laboratorio · Imagenología ·
+Enfermería · Procedimientos · Vacunación · Facturación · EPS ·
+Ambulancias · Emergencias · Reportes · Dashboard · Configuración
 
 ---
 
 ## 🗄 Modelo de base de datos
 
 | Módulo | Tabla |
-|---|---|
+| --- | --- |
 | Seguridad | `users` |
 | Seguridad | `roles` |
 | Seguridad | `permissions` |
@@ -301,7 +313,7 @@ Seguridad · Usuarios · Roles · Pacientes · Médicos · Especialidades · Age
 ### Resumen de entidades
 
 | Módulo | Tablas |
-|---|---:|
+| --- | ---: |
 | Seguridad | 7 |
 | Pacientes | 6 |
 | Médicos | 5 |
@@ -331,7 +343,7 @@ Seguridad · Usuarios · Roles · Pacientes · Médicos · Especialidades · Age
 ## 👨‍💻 Distribución del equipo
 
 | # | Módulo | # | Módulo |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 1 | Autenticación | 17 | Administración de Medicamentos |
 | 2 | Usuarios | 18 | Laboratorio |
 | 3 | Roles y permisos | 19 | Imagenología |
@@ -353,7 +365,8 @@ Seguridad · Usuarios · Roles · Pacientes · Médicos · Especialidades · Age
 
 ## 🔐 Seguridad
 
-JWT · Hash de contraseñas · Roles y permisos · Validaciones · Auditoría y logs · Protección de rutas · Control de sesiones
+JWT · Hash de contraseñas · Roles y permisos · Validaciones · Auditoría y
+logs · Protección de rutas · Control de sesiones
 
 ---
 
@@ -373,10 +386,14 @@ JWT · Hash de contraseñas · Roles y permisos · Validaciones · Auditoría y 
 
 ## 📄 Licencia
 
-Este proyecto se desarrolla con **fines académicos**, como práctica de Ingeniería de Software, trabajo colaborativo y buenas prácticas de desarrollo. El código se distribuye bajo licencia **MIT**, por lo que puede reutilizarse, modificarse y compartirse libremente, dando el crédito correspondiente.
+Este proyecto se desarrolla con **fines académicos**, como práctica de
+Ingeniería de Software, trabajo colaborativo y buenas prácticas de desarrollo.
+El código se distribuye bajo licencia **MIT**, por lo que puede reutilizarse,
+modificarse y compartirse libremente, dando el crédito correspondiente.
 
 ---
 
 ## ⭐ Estado del proyecto
 
-> 🚧 **En desarrollo** — Proyecto colaborativo con metodología Git Flow y desarrollo por módulos. Aún no hay código publicado en el repositorio.
+> 🚧 **En desarrollo** — Proyecto colaborativo con metodología Git Flow y
+> desarrollo por módulos. Aún no hay código publicado en el repositorio.
