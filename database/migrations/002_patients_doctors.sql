@@ -23,7 +23,7 @@ END;
 $$;
 
 CREATE TABLE specialties (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name VARCHAR(120) NOT NULL,
     description TEXT,
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
@@ -33,17 +33,17 @@ CREATE TABLE specialties (
 );
 
 CREATE TABLE patients (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    document_type_id BIGINT NOT NULL,
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    document_type_id INTEGER NOT NULL,
     document_number VARCHAR(30) NOT NULL,
     first_name VARCHAR(100) NOT NULL,
     middle_name VARCHAR(100),
     last_name VARCHAR(100) NOT NULL,
     second_last_name VARCHAR(100),
     birth_date DATE NOT NULL,
-    gender_id BIGINT NOT NULL,
-    blood_type_id BIGINT,
-    marital_status_id BIGINT,
+    gender_id INTEGER NOT NULL,
+    blood_type_id INTEGER,
+    marital_status_id INTEGER,
     email VARCHAR(254),
     phone VARCHAR(30),
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
@@ -64,8 +64,8 @@ CREATE TABLE patients (
 );
 
 CREATE TABLE patient_contacts (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    patient_id BIGINT NOT NULL,
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    patient_id INTEGER NOT NULL,
     full_name VARCHAR(200) NOT NULL,
     relationship VARCHAR(80) NOT NULL,
     phone VARCHAR(30) NOT NULL,
@@ -78,11 +78,11 @@ CREATE TABLE patient_contacts (
 );
 
 CREATE TABLE patient_addresses (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    patient_id BIGINT NOT NULL,
-    country_id BIGINT NOT NULL,
-    department_id BIGINT NOT NULL,
-    city_id BIGINT NOT NULL,
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    patient_id INTEGER NOT NULL,
+    country_id INTEGER NOT NULL,
+    department_id INTEGER NOT NULL,
+    city_id INTEGER NOT NULL,
     address VARCHAR(250) NOT NULL,
     neighborhood VARCHAR(120),
     postal_code VARCHAR(20),
@@ -100,9 +100,9 @@ CREATE TABLE patient_addresses (
 );
 
 CREATE TABLE patient_documents (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    patient_id BIGINT NOT NULL,
-    document_type_id BIGINT NOT NULL,
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    patient_id INTEGER NOT NULL,
+    document_type_id INTEGER NOT NULL,
     file_url TEXT NOT NULL,
     uploaded_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
     created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -116,8 +116,8 @@ CREATE TABLE patient_documents (
 );
 
 CREATE TABLE patient_photos (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    patient_id BIGINT NOT NULL,
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    patient_id INTEGER NOT NULL,
     file_url TEXT NOT NULL,
     is_current BOOLEAN NOT NULL DEFAULT TRUE,
     created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -126,10 +126,10 @@ CREATE TABLE patient_photos (
 );
 
 CREATE TABLE patient_insurance (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    patient_id BIGINT NOT NULL,
-    eps_id BIGINT NOT NULL,
-    insurance_plan_id BIGINT,
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    patient_id INTEGER NOT NULL,
+    eps_id INTEGER NOT NULL,
+    insurance_plan_id INTEGER,
     membership_number VARCHAR(80) NOT NULL,
     valid_from DATE,
     valid_until DATE,
@@ -150,9 +150,9 @@ CREATE TABLE patient_insurance (
 );
 
 CREATE TABLE doctors (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    user_id BIGINT,
-    document_type_id BIGINT NOT NULL,
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    user_id INTEGER,
+    document_type_id INTEGER NOT NULL,
     document_number VARCHAR(30) NOT NULL,
     medical_license VARCHAR(80) NOT NULL,
     first_name VARCHAR(100) NOT NULL,
@@ -174,9 +174,9 @@ CREATE TABLE doctors (
 );
 
 CREATE TABLE doctor_specialties (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    doctor_id BIGINT NOT NULL,
-    specialty_id BIGINT NOT NULL,
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    doctor_id INTEGER NOT NULL,
+    specialty_id INTEGER NOT NULL,
     is_primary BOOLEAN NOT NULL DEFAULT FALSE,
     created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT fk_doctor_specialties_doctor
@@ -187,8 +187,8 @@ CREATE TABLE doctor_specialties (
 );
 
 CREATE TABLE doctor_schedule (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    doctor_id BIGINT NOT NULL,
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    doctor_id INTEGER NOT NULL,
     day_of_week SMALLINT NOT NULL,
     start_time TIME NOT NULL,
     end_time TIME NOT NULL,
@@ -214,8 +214,8 @@ CREATE TABLE doctor_schedule (
 );
 
 CREATE TABLE doctor_availability (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    doctor_id BIGINT NOT NULL,
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    doctor_id INTEGER NOT NULL,
     availability_date DATE NOT NULL,
     start_time TIME NOT NULL,
     end_time TIME NOT NULL,
