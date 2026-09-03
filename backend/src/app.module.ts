@@ -11,6 +11,13 @@ import { PharmacyModule } from './pharmacy/pharmacy.module';
 import { LaboratoryModule } from './laboratory/laboratory.module';
 import { HospitalizationModule } from './hospitalization/hospitalization.module';
 import { BillingModule } from './billing/billing.module';
+import { UsersModule } from './users/users.module';
+import { RolesModule } from './roles/roles.module';
+import { PermissionsModule } from './permissions/permissions.module';
+import { RolePermissionsModule } from './role-permissions/role-permissions.module';
+import { UserRolesModule } from './user-roles/user-roles.module';
+import { SessionsModule } from './sessions/sessions.module';
+import { AuditLogsModule } from './audit-logs/audit-logs.module';
 
 @Module({
   imports: [
@@ -48,6 +55,13 @@ import { BillingModule } from './billing/billing.module';
     HospitalizationModule,
     // Módulo 9 - Facturación y Reportes (Tatiana Alba)
     BillingModule,
+    UsersModule,
+    RolesModule,
+    PermissionsModule,
+    RolePermissionsModule,
+    UserRolesModule,
+    SessionsModule,
+    AuditLogsModule,
   ],
 })
 export class AppModule {}
