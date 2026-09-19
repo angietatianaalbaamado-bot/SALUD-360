@@ -8,7 +8,7 @@ import { AppointmentsModule } from './appointments/appointments.module';
 import { MedicalRecordsModule } from './medical-records/medical-records.module';
 import { TriageModule } from './triage/triage.module';
 import { PharmacyModule } from './pharmacy/pharmacy.module';
-import { LaboratoryModule } from './laboratory/laboratory.module';
+import { LaboratoryImagingModule } from './laboratory-imaging/laboratory-imaging.module';
 import { HospitalizationModule } from './hospitalization/hospitalization.module';
 import { BillingModule } from './billing/billing.module';
 
@@ -43,7 +43,7 @@ import { BillingModule } from './billing/billing.module';
     // Módulo 6 - Farmacia
     PharmacyModule,
     // Módulo 7 - Laboratorio e Imágenes
-    LaboratoryModule,
+    LaboratoryImagingModule,
     // Módulo 8 - Hospitalización
     HospitalizationModule,
     // Módulo 9 - Facturación y Reportes (Tatiana Alba)
