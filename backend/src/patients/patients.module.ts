@@ -1,5 +1,8 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AuthModule } from '../auth/auth.module';
+import { DoctorsController } from './doctors.controller';
+import { DoctorsService } from './doctors.service';
 import { PatientsController } from './patients.controller';
 import { PatientsService } from './patients.service';
 import { DoctorAvailability } from './entities/doctor-availability.entity';
@@ -16,6 +19,7 @@ import { Specialty } from './entities/specialty.entity';
 
 @Module({
   imports: [
+    AuthModule,
     TypeOrmModule.forFeature([
       Patient,
       PatientContact,
@@ -30,8 +34,8 @@ import { Specialty } from './entities/specialty.entity';
       DoctorAvailability,
     ]),
   ],
-  controllers: [PatientsController],
-  providers: [PatientsService],
-  exports: [PatientsService],
+  controllers: [PatientsController, DoctorsController],
+  providers: [PatientsService, DoctorsService],
+  exports: [PatientsService, DoctorsService],
 })
 export class PatientsModule {}
